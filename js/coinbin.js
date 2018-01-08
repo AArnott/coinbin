@@ -959,7 +959,7 @@ $(document).ready(function() {
 		$.ajax ({
 			type: "GET",
 			cache: false,
-			url: "http://blockdozer.com/insight-api/addr/"+redeem.addr+"/utxo",
+			url: "https://bitcoincash.blockexplorer.com/api/addr/"+redeem.addr+"/utxo",
 			dataType: "json",
 			error: function(data) {
 				$("#redeemFromStatus").removeClass('hidden').html('<span class="glyphicon glyphicon-exclamation-sign"></span> Unexpected error, unable to retrieve unspent outputs!');
@@ -1146,7 +1146,7 @@ $(document).ready(function() {
 		$(thisbtn).val('Please wait, loading...').attr('disabled',true);
 		$.ajax ({
 			type: "POST",
-			url: "http://blockdozer.com/insight-api/tx/send",
+			url: "https://bitcoincash.blockexplorer.com/api/tx/send",
 			data: {"rawtx":$("#rawTransaction").val()},
 			dataType: "json",
 			error: function(data) {
